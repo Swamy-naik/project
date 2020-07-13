@@ -1,0 +1,76 @@
+.ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #FF6600;
+    opacity: 1;
+}
+
+.li {
+    font-size: 25px;
+    font-family: Helvetica,Arial,sans-serif;
+    float: right;
+    padding-right: 10px;
+}
+
+.li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.li a:hover {
+    background-color: #111;
+}
+
+.title {
+    float: left;
+}
+
+.image {
+    height: 40px;
+    width: 40px;
+}
+
+
+tr th {
+    font-size: 27px;
+    font-family: Helvetica,Arial,sans-serif;
+}
+
+tr td {
+    font-size: 30px;
+    font-family: Helvetica,Arial,sans-serif;
+}
+
+hr {
+    border: 2px solid white;
+}
+.component{
+    background-color:white;
+}
+.tablecontainer{
+    padding-left: 0%;
+    float: left;
+    width: 760px;
+    padding-bottom: 0;
+}
+
+.table table-borderless table-hover{
+    float: left;
+}
+
+
+
+
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+

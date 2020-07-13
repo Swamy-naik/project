@@ -1,0 +1,148 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<ul class="ul">
+    <li class="li title">
+        <a routerLink='../home'><img class="image" src="../../favicon.ico"> Fitness Tracker</a>
+    </li>
+    <li class="li"><a (click)="signout()">Sign out</a></li>
+    <li class="li"><a routerLink='../home'>Home</a></li>
+
+</ul>
+
+
+
+
+<br>
+<div class="component">
+
+    <section>
+      
+      <div class=" mb-4">
+        
+        <div class="row">
+  
+          <div class="col-md-6">
+            <img class="img-fluid rounded-left" src="https://ca-times.brightspotcdn.com/dims4/default/ea9d7c0/2147483647/strip/true/crop/1254x836+0+0/resize/840x560!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Faa%2Fe5%2F62eb933a29c60ba72bb16bfe66d0%2Fpac-free-yoga-san-diego-20180516-001">
+          </div>
+  
+          <div class="tablecontainer">
+            
+<div class="table-responsive text-nowrap">
+    <!--Table-->
+    <table class="table table-striped">
+
+      <!--Table head-->
+      
+      <!--Table head-->
+
+      <!--Table body-->
+      <tbody>
+        <tr>
+            <th > First Name:</th>
+            <td>{{user.firstName}}</td>
+        </tr>
+        <tr>
+            <th>Last Name:</th>
+            <td>{{user.lastName}}</td>
+        </tr>
+        <tr>
+            <th>Email:</th>
+            <td>{{user.email}}</td>
+        </tr>
+        <tr>
+            <th>Gender:</th>
+            <td>{{user.gender}}</td>
+        </tr>
+        <tr>
+            <th>Age:</th>
+            <td>{{user.age}} yrs</td>
+        </tr>
+        <tr>
+            <th>Height:</th>
+            <td>{{user.height}} cms</td>
+        </tr>
+        <tr>
+            <th>Weight:</th>
+            <td>{{user.weight}} kgs</td>
+        </tr>
+        <tr>
+            <th>BMI:</th>
+            <td>{{user.bmi}}</td>
+        </tr>
+        <tr>
+            <th>BMI Category:</th>
+            <td *ngIf="user.category == 'underweight_male' || user.category == 'underweight_female'">
+                UnderWeight</td>
+            <td *ngIf="user.category == 'overweight_male' || user.category == 'overweight_female'">
+                OverWeight</td>
+            <td *ngIf="user.category == 'normal_male' || user.category == 'noramal_female'">
+                normal</td>
+        </tr>
+      </tbody>
+      <!--Table body-->
+
+
+    </table>
+    <!--Table-->
+  </div>
+           
+          </div>
+  
+        </div>
+  
+      </div>
+  
+    </section>
+  
+  </div>
+
+  <div class="container my-5 py-5 z-depth-1">
+ 
+ 
+        <!--Section: Content-->
+        <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
+    
+          <!--Grid row-->
+          <div class="row">
+    
+            <!--Grid column-->
+            <div class="col-md-6 mb-4 mb-md-0">
+    
+              <h3 class="font-weight-bold"><u>Workout|Sweat|Develop|Achieve</u></h3>
+    
+              <p class="text-muted"> The Category in your profile should not bother you, Whatever it may be we will always be with you to train you, guide you and help you to achieve your dream goals.</p>
+              <p>So....</p>
+              <a class="btn" routerLink='../meal' role="button">Start now</a>
+    
+            </div>
+            <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col-md-6 mb-4 mb-md-0">
+    
+              <!--Image-->
+              <div class="view overlay z-depth-1-half">
+                <img src="https://www.hindustantimes.com/rf/image_size_960x540/HT/p2/2018/07/05/Pictures/_a021f0b0-8046-11e8-8bd0-affd130bd192.jpg" class="img-fluid"
+                  alt="">
+                <a href="#">
+                  <div class="mask rgba-white-light"></div>
+                </a>
+              </div>
+    
+            </div>
+            <!--Grid column-->
+    
+          </div>
+          <!--Grid row-->
+    
+    
+        </section>
+        <!--Section: Content-->
+    
+    
+      </div>
+  
+  
+
+
+ 

@@ -1,0 +1,422 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="background row">
+  <ul class="ul">
+    <li class="li title">
+        <a routerLink='../home'><img class="image1" src="../../favicon.ico"> Fitness Tracker</a>
+    </li>
+    <li class="li"><a routerLink='../blog'>Blog</a></li>
+    <li class="li"><a routerLink='../signup'>signup</a></li>
+    <li class="li"><a routerLink='../index'>Index</a></li>
+
+  </ul>
+
+<div class="logincontainer">
+
+
+
+
+  <div class="container-fluid">
+    <div class="row no-gutter">
+        <!-- The image half -->
+        <div class="col-md-6 d-none d-md-flex bg-image"></div>
+
+
+        <!-- The content half -->
+        <div class="col-md-6 bg-light">
+            <div class="login d-flex align-items-center py-5">
+
+                <!-- Demo content-->
+                <div class="container1">
+                    <div class="row">
+                        <div class="col-lg-10 col-xl-7 mx-auto">
+                            <h3 class="display-4"><b>Login</b></h3>
+                            <p class="text-muted mb-4">login and get your dose of health</p>
+                            
+                            <div *ngIf="error">
+                              <div class="alert alert-danger">
+                                  <strong style="color: black; font-size: 20px;">{{error}}</strong>
+                              </div>
+                          </div>
+                            <form #loginForm="ngForm" (submit)="edit(loginForm.value)">
+                                <div class="form-grou ">
+                <input type="email" id="email" placeholder="Email" class="form-control" name="email" ngModel required/>
+                                </div>
+                                <br>
+                                <div class="form-grou">
+                                    <input type="password" id="pwd" class="form-control" placeholder="password" name="password" ngModel required/>
+                                </div>
+                                <br>
+                                <div class="custom-control custom-checkbox mb-3">
+                                   
+                                    <button type="submit" class="btn btn-primary">Let's Go</button>&nbsp;
+
+                                    
+                                   
+                               
+                               
+                                </div>
+
+
+
+
+                                
+                                <div class="modal fade" id="myModal">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                
+                                            <!-- Modal Header -->
+                                            <div class="modal-header">
+                                                <h3 class="modal-title">Please enter valid email</h3>
+                                                <button type="button" class="close" #closeAddExpenseModal data-dismiss="modal">&times;</button>
+                                            </div>
+                                            <!-- Modal body -->
+                                            <div class="modal-body">
+                                
+                                                <div *ngIf="error1">
+                                                    <div class="alert alert-danger">
+                                                        <strong style="color: black; font-size: 20px;">{{error1}}</strong>
+                                                    </div>
+                                                </div>
+                                                <form #email="ngForm" (submit)="changepassword(email.value,$event)">
+                                                    <div class="form-group">
+                                                        <label for="email">Email address:</label>
+                                                        <input type="email" id="email" placeholder="Email" class="form-control" name="email" ngModel required/>
+                                                    </div>
+                                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <button id="openModal" #openModal [hidden]="true" data-toggle="modal" data-target="#myModal1"></button>
+
+                                <div class="modal fade" id="myModal1">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                
+                                            <!-- Modal Header -->
+                                            <div class="modal-header">
+                                                <h3 class="modal-title">Please enter token recieved</h3>
+                                                <button type="button" class="close" #closeAddExpenseModal1 data-dismiss="modal">&times;</button>
+                                            </div>
+                                            <!-- Modal body -->
+                                            <div class="modal-body">
+                                
+                                                <div *ngIf="error1">
+                                                    <div class="alert alert-danger">
+                                                        <strong style="color: black; font-size: 20px;">{{error1}}</strong>
+                                                    </div>
+                                                </div>
+                                                <form #passwordForm="ngForm" (submit)="loginPassword(passwordForm.value,$event)">
+                                                    <div class="form-group">
+                                                        <label for="password">Token</label>
+                                                        <input type="password" id="password" placeholder="token" class="form-control" name="password" ngModel required/>
+                                                    </div>
+                                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                <div class="text-center d-flex justify-content-between mt-4"><p> FOLLOW US ON  <a href="https://www.instagram.com/" class="font-italic text-muted"> 
+                                        <u>INSTAGRAM</u></a></p></div>
+                            </form>
+                        </div>
+                    </div>
+                </div><!-- End -->
+
+            </div>
+        </div><!-- End -->
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- <div class="spacebmi"></div> -->
+
+
+
+<!-- bmi image and text -->
+<div class="space">
+    <img  class="bmiimage" src="https://www.1mg.com/articles/wp-content/uploads/2018/07/BMI.jpg" alt="Italian Trulli">
+   
+    <main class="st_viewport">
+      <div class="st_wrap_table" data-table_id="0">
+        <header class="st_table_header">
+          <h2>BMI Based Classification</h2>
+          <div class="st_row">
+            <div class="st_column _rank">BMI</div>
+            <div class="st_column _name">CATEGO</div>
+
+          </div>
+        </header>
+        <div class="st_table">
+          
+          <div class="st_row">
+            <div class="st_column _rank">18.5 </div>
+            <div class="st_column _name">Under weight</div>
+            
+          </div>
+          <div class="st_row">
+            <div class="st_column _rank">18.5 to 24.9</div>
+            <div class="st_column _name">Ideal</div>
+            
+          </div>
+          <div class="st_row">
+            <div class="st_column _rank">25 to 29.9</div>
+            <div class="st_column _name">Overweight</div>
+            
+          </div>
+          <div class="st_row">
+            <div class="st_column _rank">30</div>
+            <div class="st_column _name">Obesity</div>
+
+          </div>
+         
+        </div>
+      </div>
+      <div class="st_wrap_table" data-table_id="1">
+        <header class="st_table_header">
+          <h2>Bmi Based On Height</h2>
+          <div class="st_row">
+            <div class="st_column _rank">Height</div>
+            <div class="st_column _name">Normal</div>
+            <div class="st_column _surname">Overweight</div>
+            <div class="st_column _year">Obese</div>
+          </div>
+        </header>
+        <div class="st_table">
+          <div class="st_row">
+            <div class="st_column _rank">4' 10"</div>
+            <div class="st_column _name">91 to 118 lbs.</div>
+            <div class="st_column _surname">119 to 142 lbs.</div>
+            <div class="st_column _year">143 to 186 lbs.
+            </div>
+          </div>
+          <div class="st_row">
+            <div class="st_column _rank">5'
+            </div>
+            <div class="st_column _name">97 to 127 lbs.
+            </div>
+            <div class="st_column _surname">128 to 152 lbs.
+            </div>
+            <div class="st_column _year">153 to 199 lbs.
+            </div>
+          </div>
+          <div class="st_row">
+            <div class="st_column _rank">5' 2"
+            </div>
+            <div class="st_column _name">104 to 135 lbs.
+            </div>
+            <div class="st_column _surname">136 to 163 lbs.
+            </div>
+            <div class="st_column _year">164 to 213 lbs.
+            </div>
+          </div>
+          <div class="st_row">
+            <div class="st_column _rank">5' 4"
+            </div>
+            <div class="st_column _name">110 to 144 lbs.
+            </div>
+            <div class="st_column _surname">145 to 173 lbs.
+            </div>
+            <div class="st_column _year">174 to 227 lbs.
+            </div>
+          </div>
+          <div class="st_row">
+            <div class="st_column _rank">5' 6"
+            </div>
+            <div class="st_column _name">118 to 154 lbs.
+            </div>
+            <div class="st_column _surname">155 to 185 lbs.
+            </div>
+            <div class="st_column _year">186 to 241 lbs.
+            </div>
+          </div>
+          <div class="st_row">
+            <div class="st_column _rank">5' 8"
+            </div>
+            <div class="st_column _name">125 to 163 lbs.
+            </div>
+            <div class="st_column _surname">164 to 196 lbs.
+            </div>
+            <div class="st_column _year">197 to 256 lbs.
+            </div>
+          </div>
+          <div class="st_row">
+            <div class="st_column _rank">5' 10"
+            </div>
+            <div class="st_column _name">132 to 173 lbs.
+            </div>
+            <div class="st_column _surname">174 to 208 lbs.
+            </div>
+            <div class="st_column _year">209 to 271 lbs.
+            </div>
+          </div>
+          <div class="st_row">
+            <div class="st_column _rank">6'
+            </div>
+            <div class="st_column _name">140 to 183 lbs.
+
+            </div>
+            <div class="st_column _surname">184 to 220 lbs.
+            </div>
+            <div class="st_column _year">221 to 287 lbs.
+            </div>
+          </div>
+          
+          </div><div class="st_row">
+            <div class="st_column _rank">6' 2"
+              '
+            </div>
+            <div class="st_column _name">148 to 193 lbs.
+
+
+            </div>
+            <div class="st_column _surname">194 to 232 lbs.
+
+            </div>
+            <div class="st_column _year">233 to 303 lbs.
+
+            </div>
+          </div>
+          <div class="st_row">
+            <div class="st_column _rank">6' 4"
+
+            </div>
+            <div class="st_column _name">156 to 204 lbs.
+
+            </div>
+            <div class="st_column _surname">205 to 245 lbs.
+            </div>
+            <div class="st_column _year">246 to 320 lbs.
+            </div>
+        </div>
+      </div>
+      <div class="st_wrap_table" data-table_id="2">
+        <header class="st_table_header">
+          <h2>Survices We Provide in Fitness Tracker</h2>
+          <div class="st_row">
+            <div class="st_column _rank">Services</div>
+            
+          </div>
+        </header>
+        <div class="st_table">
+          <div class="st_row">
+            <div class="st_column _rank">Weight Trainig</div>
+            
+          </div>
+          <div class="st_row">
+            <div class="st_column _rank">Yoga</div>
+           
+          </div>
+          <div class="st_row">
+            <div class="st_column _rank">Meditation</div>
+           
+          </div>
+          <div class="st_row">
+            <div class="st_column _rank">Cardio</div>
+            
+          </div>
+          <div class="st_row">
+            <div class="st_column _rank">Pilates</div>
+            
+          </div>
+          <div class="st_row">
+            <div class="st_column _rank">zumba</div>
+            
+          </div>
+          
+        </div>
+      </div>
+      
+    </main>
+
+
+ 
+
+
+
+<div class="text">
+    <div class="try">
+        <div class="page">
+            <div class="page__section">
+                <span class="page__name-effect"></span>
+                <div class="page__group">
+                    <article class="news">
+                        <header class="news__header">
+                            <time class="news__date" datetime="2020-05-26">
+                                <span class="news__day">26</span>
+                                <span class="news__year">june 2020</span>
+                            </time>
+                            <h3 class="r-title news__title">
+                                <a href="#0" class="r-link animated-underline animated-underline_type1 news__link">
+                                    The Hindu News
+                                </a>
+                            </h3>	
+                        </header>
+                        <div class="news__content">
+                            <p>
+                                The Fitness Tracker is becoming a pioneer in the fitness industry with their services, their competetors like cult-Fit is loosing their share of market for this new organization, the unprecedented customer satisfaction as their main goal Fitness Tracker is moving towards a path full of successes and achievements. The management of the Fitness Tracker shared their happiness with us in this article
+                            </p>
+                            <p><br>-The Cheif Editor</p>
+                        </div>
+                    </article>
+                    <article class="news arabic">
+                        <header class="news__header">
+                            <time class="news__date" datetime="2020-05-24">
+                                <span class="news__day">24</span>
+                                <span class="news__year">June 2020</span>
+                            </time>
+                            <h3 class="r-title news__title">
+                                <a href="#0" class="r-link animated-underline animated-underline_type1 news__link">
+                                   NDTV News
+                                </a>
+                            </h3>	
+                        </header> 
+                        <div class="news__content">
+                            <p>
+                               The trend people now are following is BE HEALTHY AND BE FIT, this trend in people is giving a great oppurtunity to the organizations like Fitness Tracker, They are promoting this trend with their good services and affordable packages.				</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+</div>
+
+<footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>About us</h6>
+          <p class="text-justify"><b>Fitness Tracker</b> is established to give the healthy life back to the people who were in the search of health and well-being because <i>EVERYONE DESERVES TO BE HEALTHY AND FIT</i></p>
+        </div>
+
+        
+
+        
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by 
+       <a href="#">Fitness Tracker</a>.
+          </p>
+        </div>
+
+        
+      </div>
+    </div>
+</footer>

@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: user-service
+    
+  datasource:
+    url: jdbc:mysql://localhost:3306/fitnesstracker
+    username: root
+    password: 1243
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  boot:
+    admin:
+      client:
+        url: http://localhost:1112
+      
+server:
+  port: 7654
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

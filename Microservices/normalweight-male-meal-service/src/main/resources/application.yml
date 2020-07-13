@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: normalweight-male-meal-service
+    
+  datasource:
+    url: jdbc:mysql://localhost:3306/fitnessTracker
+    username: root
+    password: 1243
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  boot:
+    admin:
+      client:
+        url: http://localhost:1112       
+      
+server:
+  port: 0
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+      
+
+

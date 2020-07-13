@@ -1,0 +1,261 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="background row">
+    <ul>
+        <li class="title">
+            <a routerLink='../signup'><img class="image1" src="../../favicon.ico"> Fitness Tracker</a>
+        </li>
+
+        <li><a routerLink='../login'>Login</a></li>
+        
+        <li class="li"><a routerLink='../index'>Index</a></li>
+
+
+      </ul>
+
+
+    <div class="logincontainer">
+
+
+
+
+      <div class="container-fluid">
+        <div class="row no-gutter">
+            <!-- The image half -->
+            <div class="col-md-6 d-none d-md-flex bg-image"></div>
+    
+    
+            <!-- The content half -->
+            <div class="col-md-6 bg-light">
+                <div class="login d-flex align-items-center py-5">
+                  <div *ngIf="error">
+                    <div class="alert alert-danger">
+                        <strong style="color: black; font-size: 20px;">{{error}}</strong>
+                    </div>
+                </div>
+                    <form [formGroup]="registerForm" ngNativeValidate (ngSubmit)="onSubmit()">
+            <div class="col-sm-6">
+                <div class="form-group">
+
+                    <label class="signuplabel">First Name</label>
+                    <input type="text" placeholder="first name" formControlName="firstName" class="form-control" pattern="[A-Za-z]{3,}" title="minimum 3 characters" required />
+                </div>
+                <div class="form-group">
+                    <label class="signuplabel">Last Name</label>
+                    <input type="text" placeholder="last name" formControlName="lastName" class="form-control" pattern="[A-Za-z]{3,}" title="minimum 3 characters" required />
+                </div>
+                <div class="form-group">
+                    <label class="signuplabel">Email</label>
+                    <input type="email" placeholder="email" formControlName="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required />
+                </div>
+                <div class="form-group">
+                    <label class="signuplabel">Gender</label>
+                    <select formControlName="gender" class="form-control" required>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                        
+                                </select>
+                </div>
+                <div class="form-group">
+                    <label class="signuplabel">Age</label>
+                    <input type="number" placeholder="your age" formControlName="age" required class="form-control" min="13" max="55" />
+
+                </div>
+            </div>
+
+
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="signuplabel">Password</label>
+                    <input type="password" placeholder="password" formControlName="password" required class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                    <div *ngIf="submitted && f.password.errors" class="danger invalid-feedback">
+                        <div class="danger" *ngIf="f.password.errors.required">* Password is required</div>
+                        <div class="danger" *ngIf="f.password.errors.minlength">* Password must be at least 8 characters</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="signuplabel">Confirm Password</label>
+                    <input type="password" placeholder="confirm password" formControlName="confirmPassword" required class="form-control" [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }" />
+                    <div *ngIf="submitted && f.confirmPassword.errors" class="danger invalid-feedback">
+                        <div class="danger" *ngIf="f.confirmPassword.errors.required">* Confirm Password is required</div>
+                        <div class="danger" *ngIf="f.confirmPassword.errors.mustMatch">* Passwords must match</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="signuplabel">Height(in cm)</label>
+                    <input type="number" placeholder="enter your height" formControlName="height" class="form-control" required min="100" />
+
+                </div>
+                <div class="form-group">
+                    <label class="signuplabel">Weight(in kg)</label>
+                    <input type="number" placeholder="enter your weight" formControlName="weight" class="form-control" required min="30" />
+
+                </div>
+            </div>
+            <br><br><br><br>
+            <div class="form-group">
+                <button class="btn btn-primary">Register</button>
+            </div>
+        </form>
+    
+                </div>
+            </div>
+    
+        </div>
+    </div>
+
+    <br><br>
+    <div class="quotes">
+      <div class="card">
+        <div class="box box1">
+<h1><b>The offer available for 2year subscription of <i> Fitness Tracker</i></b></h1>
+<h1><s>RS:7000/month</s></h1>
+<h1>RS:5000/month </h1>
+
+</div>
+        <div class="bg"></div>
+      </div>
+      <div class="card">
+        <div class="box box2">
+          <h1><b>The offer available for 1year subscription of <i> Fitness Tracker</i></b></h1>
+<h1><s>RS:7000/month</s></h1>
+<h1>RS:6000/month </h1>
+        </div>
+        <div class="bg"></div>
+      </div>
+      <div class="card">
+        <div class="box box3">
+          <h1><b>The offer available for 6month subscription of <i> Fitness Tracker</i></b></h1>
+          <h1><s>RS:7000/month</s></h1>
+          <h1>RS:6500/month </h1>
+        </div>
+        <div class="bg"></div>
+      </div>
+    </div>
+
+    <div class="hello1">
+        <div class="container my-5 z-depth-1">
+
+
+            <!--Section: Content-->
+            <section class="dark-grey-text">
+          
+              <div class="row pr-lg-5">
+                <div class="col-md-7 mb-4">
+          
+                  <div class="view">
+                    <img src="https://as1.ftcdn.net/jpg/01/35/43/22/500_F_135432256_PzMVjJiLjIwRRS4Zkjyzg60j5MpFuyjA.jpg" class="img-fluid" alt="smaple image">
+                  </div>
+          
+                </div>
+                <div class="col-md-5 d-flex align-items-center">
+                  <div>
+                    
+                    <h3 class="font-weight-bold mb-4">Facts About Physical Inactivity</h3>
+          
+                      <p>Physical inactivity grew into the fourth largest global killer in the world (according to the World Health Organisation), with some claiming it takes more lives than smoking, diabetes and obesity combined..</p>
+          
+<!-- Button trigger modal-->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalRelatedContent">Read Article</button>
+  
+  <!--Modal: modalRelatedContent-->
+  <div class="modal fade right" id="modalRelatedContent" tabindex="-1" role="dialog"
+    aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog modal-side modal-bottom-right modal-notify modal-info" role="document">
+      <!--Content-->
+      <div class="modal-content">
+        <!--Header-->
+        <div class="modal-header">
+          <p class="heading">Related article</p>
+  
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="white-text">&times;</span>
+          </button>
+        </div>
+  
+        <!--Body-->
+        <div class="modal-body">
+  
+          <div class="row">
+            <div class="col-5">
+              <img src="https://cdn.lifehack.org/wp-content/uploads/2015/12/14140000/shutterstock_299382308.jpg"
+                class="img-fluid" alt="">
+            </div>
+  
+            <div class="col-7">
+              <p><strong>"WHO" ON PHYSICAL INACTIVITY</strong></p>
+              <p>Two thousand years ago, Hippocrates, the Father of Modern Medicine hit the nail on the head. He said, that if we all had “the right amount of nourishment and exercise, not too little and not too much, we would have found the safest way to health”. Bingo.
+
+                Obviously then, being a species of great intellect, over the next two millennia we took on his sensible advice, integrating exercise into our daily life and cashing in on the rewards for our bodies and minds. Hmm, maybe we didn’t quite all get that memo. Instead something else happened and physical inactivity grew into the fourth largest global killer in the world (according to the World Health Organisation), with some claiming it takes more lives than smoking, diabetes and obesity combined.
+                
+                Yes, physical inactivity has its price tags. It is linked to the development of chronic health problems like heart disease, type 2 diabetes, obesity, depression, dementia and cancer. It can make us feel bad about ourselves, guilty and frustrated, appeased only with the ever alluring reward of inactivity – comfort, rest and stress-free. Our creaking NHS too gets a bill that would make anyone wince reaching for their wallet – somewhere between £8 and £20 billion per year through both the direct and indirect healthcare costs including that on the economy. Ouch.
+                
+                
+                The third price tag, and possibly most in need of an active not passive reaction, is the generational one. There is growing over the degree of inactivity in children with precipitants embedded within our shift to a more sedentary lifestyle, fear and risk associated with outdoor play, and the advent of more advanced and ‘real-life replacement’ for one in four children who see online social networking and gaming as their activity. Even more sobering is the evidence that suggests many children still have a negative approach to physical activity in schools, with teachers believing that nearly half of primary school pupils leaving school without “basic movement skills”, and that more than one in three children dislike exercise by the time they leave primary school. These barriers can potentially frame their adult sedentary life. A high price tag indeed.</p>
+              <button type="button" href="https://www.independent.co.uk/life-style/health-and-families/features/the-age-of-inactivity-how-laziness-is-killing-us-10347541.html" onclick= "location.href='https://www.independent.co.uk/life-style/health-and-families/features/the-age-of-inactivity-how-laziness-is-killing-us-10347541.html';" class="btn btn-info btn-md">Read more</button>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/.Content-->
+    </div>
+  </div>
+  <!--Modal: modalRelatedContent-->          
+                  </div>
+                </div>
+              </div>
+          
+            </section>
+            <!--Section: Content-->
+          
+          
+          </div>
+    </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <div class="hello"></div>
+      <!-- Site footer -->
+      <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <h6>About us</h6>
+              <p class="text-justify"><b>Fitness Tracker</b> is established to give the healthy life back to the people who were in the search of health and well-being because <i>EVERYONE DESERVES TO BE HEALTHY AND FIT</i></p>
+            </div>
+  
+            
+  
+            
+          </div>
+          <hr>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+                <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by 
+                    <a href="#">Fitness Tracker</a>.
+              </p>
+            </div>
+  <div class="col-md-4 col-sm-6 col-xs-12">
+              
+            </div>
+          </div>
+        </div>
+  </footer>
